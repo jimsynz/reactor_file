@@ -35,7 +35,7 @@ defmodule Reactor.File.MixProject do
     [
       name: :reactor_file,
       files: ~w[lib .formatter.exs mix.exs README* LICENSE* CHANGELOG* documentation],
-      licenses: ["HL3-FULL"],
+      licenses: [],
       links: %{
         "Source" => "https://harton.dev/james/reactor_file",
         "GitHub" => "https://github.com/jimsynz/reactor_file",
