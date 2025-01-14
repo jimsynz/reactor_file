@@ -94,10 +94,17 @@ defmodule FileCase do
     opts = Spark.Options.validate!(opts, @lorem_files_opts)
 
     how_many = opts[:how_many] || :rand.uniform(3) + 3
+    lorem_file_opts = opts[:lorem_file_opts] || []
 
     1..how_many
-    |> Enum.map(fn _ ->
-      lorem_file(tmp_dir, opts[:lorem_file_opts] || [])
+    |> Enum.map(fn i ->
+      lorem_file_opts =
+        lorem_file_opts
+        |> Keyword.put_new_lazy(:name, fn ->
+          "#{i}_#{Faker.Lorem.word()}"
+        end)
+
+      lorem_file(tmp_dir, lorem_file_opts)
     end)
     |> Enum.sort()
   end
