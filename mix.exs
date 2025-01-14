@@ -3,7 +3,7 @@ defmodule Reactor.File.MixProject do
   A Reactor extension which provides steps for working with the filesystem.
   """
 
-  @version "0.1.0"
+  @version "0.2.0"
   use Mix.Project
 
   def project do
@@ -34,7 +34,7 @@ defmodule Reactor.File.MixProject do
   defp package do
     [
       name: :reactor_file,
-      files: ~w[liv .formatter.exs mix.exs README* LICENSE* CHANGELOG* documentation],
+      files: ~w[lib .formatter.exs mix.exs README* LICENSE* CHANGELOG* documentation],
       licenses: ["HL3-FULL"],
       links: %{
         "Source" => "https://harton.dev/james/reactor_file",
