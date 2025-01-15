@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.4.0](https://harton.dev/james/reactor_file/compare/v0.3.0...v0.4.0) (2025-01-15)
+
+
+
+
+### Features:
+
+* Add `rmdir` DSL step. (#2)
+
 ## [v0.3.0](https://harton.dev/james/reactor_file/compare/v0.2.1...v0.3.0) (2025-01-15)
 
 
