@@ -3,7 +3,7 @@ defmodule Reactor.File.MixProject do
   A Reactor extension which provides steps for working with the filesystem.
   """
 
-  @version "0.2.1"
+  @version "0.3.0"
   use Mix.Project
 
   def project do

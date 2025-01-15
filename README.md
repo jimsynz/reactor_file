@@ -54,7 +54,7 @@ by adding `reactor_file` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:reactor_file, "~> 0.2.1"}
+    {:reactor_file, "~> 0.3.0"}
   ]
 end
 ```
