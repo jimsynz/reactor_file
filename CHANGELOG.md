@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.8.0](https://harton.dev/james/reactor_file/compare/v0.7.0...v0.8.0) (2025-01-17)
+
+
+
+
+### Features:
+
+* Add `chmod` step. (#9)
+
 ## [v0.7.0](https://harton.dev/james/reactor_file/compare/v0.6.0...v0.7.0) (2025-01-17)
 
 
