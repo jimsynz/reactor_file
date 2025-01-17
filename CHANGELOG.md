@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.4.2](https://harton.dev/james/reactor_file/compare/v0.4.1...v0.4.2) (2025-01-17)
+
+
+
+
+### Improvements:
+
+* Rename `file_glob` to just `glob` (#4)
+
 ## [v0.4.1](https://harton.dev/james/reactor_file/compare/v0.4.0...v0.4.1) (2025-01-17)
 
 
