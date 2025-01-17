@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.5.0](https://harton.dev/james/reactor_file/compare/v0.4.2...v0.5.0) (2025-01-17)
+
+
+
+
+### Features:
+
+* Add `stat` step, which returns information about a path. (#5)
+
 ## [v0.4.2](https://harton.dev/james/reactor_file/compare/v0.4.1...v0.4.2) (2025-01-17)
 
 
