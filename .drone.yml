@@ -79,6 +79,7 @@ steps:
       - asdf mix local.rebar --if-missing --force
       - asdf mix deps.get
       - asdf mix deps.compile
+      - asdf mix dialyzer --plt
 
   - name: store build cache
     depends_on:
