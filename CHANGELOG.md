@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.7.0](https://harton.dev/james/reactor_file/compare/v0.6.0...v0.7.0) (2025-01-17)
+
+
+
+
+### Features:
+
+* Add `chown` DSL step. (#8)
+
 ## [v0.6.0](https://harton.dev/james/reactor_file/compare/v0.5.0...v0.6.0) (2025-01-17)
 
 
