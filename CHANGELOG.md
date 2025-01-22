@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.9.0](https://harton.dev/james/reactor_file/compare/v0.8.0...v0.9.0) (2025-01-22)
+
+
+
+
+### Features:
+
+* Add `cp` step. (#10)
+
 ## [v0.8.0](https://harton.dev/james/reactor_file/compare/v0.7.0...v0.8.0) (2025-01-17)
 
 
