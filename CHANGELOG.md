@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.10.0](https://harton.dev/james/reactor_file/compare/v0.9.0...v0.10.0) (2025-01-23)
+
+
+
+
+### Features:
+
+* Add `ln` step. (#17)
+
 ## [v0.9.0](https://harton.dev/james/reactor_file/compare/v0.8.0...v0.9.0) (2025-01-22)
 
 
