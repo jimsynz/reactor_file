@@ -4,6 +4,9 @@ defmodule Reactor.File.Ops do
   alias Reactor.File.{FileError, MissingMiddlewareError}
   require Reactor.File.FileError
 
+  @doc "A guard which returns true when a struct is a `File.Stat`"
+  defguard is_stat(path) when is_struct(path, File.Stat)
+
   @doc "An error wrapped version of `File.chgrp/2`"
   def chgrp(path, gid, step, message \\ "Unable to change group") do
     with {:error, reason} when FileError.is_posix(reason) <- File.chgrp(path, gid) do
@@ -160,6 +163,20 @@ defmodule Reactor.File.Ops do
          step: step,
          message: message,
          file: path,
+         reason: reason
+       )}
+    end
+  end
+
+  @doc "An error wrapped version of `File.rename/2`"
+  def rename(source, destination, step, message \\ "Unable to rename file") do
+    with {:error, reason} when FileError.is_posix(reason) <- File.rename(source, destination) do
+      {:error,
+       FileError.exception(
+         action: {:rename, source, destination},
+         step: step,
+         message: message,
+         file: destination,
          reason: reason
        )}
     end
