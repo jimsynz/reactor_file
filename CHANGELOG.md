@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.12.0](https://harton.dev/james/reactor_file/compare/v0.11.0...v0.12.0) (2025-01-27)
+
+
+
+
+### Features:
+
+* Add `lstat` and `read_link` steps. (#26)
+
 ## [v0.11.0](https://harton.dev/james/reactor_file/compare/v0.10.0...v0.11.0) (2025-01-27)
 
 
