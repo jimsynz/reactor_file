@@ -5,6 +5,17 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.13.0](https://harton.dev/james/reactor_file/compare/v0.12.0...v0.13.0) (2025-01-28)
+### Breaking Changes:
+
+* Rename revert option on all steps for consistency.
+
+
+
+### Features:
+
+* Add `rm` step.
+
 ## [v0.12.0](https://harton.dev/james/reactor_file/compare/v0.11.0...v0.12.0) (2025-01-27)
 
 
