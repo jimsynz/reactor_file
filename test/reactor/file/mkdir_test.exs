@@ -42,7 +42,7 @@ defmodule Reactor.File.MkdirTest do
 
       mkdir :some_dir do
         path(input(:path))
-        remove_on_undo?(true)
+        revert_on_undo?(true)
       end
 
       flunk :fail, "abort" do
@@ -100,7 +100,7 @@ defmodule Reactor.File.MkdirTest do
 
       mkdir_p :some_dir do
         path(input(:path))
-        remove_on_undo?(true)
+        revert_on_undo?(true)
       end
 
       flunk :fail, "abort" do

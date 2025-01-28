@@ -762,7 +762,7 @@ Uses `File.mkdir/1` behind the scenes.
 |------|------|---------|------|
 | [`path`](#reactor-mkdir-path){: #reactor-mkdir-path .spark-required} | `Reactor.Template.Element \| Reactor.Template.Input \| Reactor.Template.Result \| Reactor.Template.Value` |  | The path of the directory to create |
 | [`description`](#reactor-mkdir-description){: #reactor-mkdir-description } | `String.t` |  | An optional description for the step |
-| [`remove_on_undo?`](#reactor-mkdir-remove_on_undo?){: #reactor-mkdir-remove_on_undo? } | `boolean` | `false` | Remove the created directory if the Reactor is undoing changes |
+| [`revert_on_undo?`](#reactor-mkdir-revert_on_undo?){: #reactor-mkdir-revert_on_undo? } | `boolean` | `false` | Remove the created directory if the Reactor is undoing changes |
 
 
 ### reactor.mkdir.wait_for
@@ -841,7 +841,7 @@ Uses `File.mkdir_p/1` behind the scenes.
 |------|------|---------|------|
 | [`path`](#reactor-mkdir_p-path){: #reactor-mkdir_p-path .spark-required} | `Reactor.Template.Element \| Reactor.Template.Input \| Reactor.Template.Result \| Reactor.Template.Value` |  | The path of the directory to create |
 | [`description`](#reactor-mkdir_p-description){: #reactor-mkdir_p-description } | `String.t` |  | An optional description for the step |
-| [`remove_on_undo?`](#reactor-mkdir_p-remove_on_undo?){: #reactor-mkdir_p-remove_on_undo? } | `boolean` | `false` | Remove the created directory if the Reactor is undoing changes |
+| [`revert_on_undo?`](#reactor-mkdir_p-revert_on_undo?){: #reactor-mkdir_p-revert_on_undo? } | `boolean` | `false` | Remove the created directory if the Reactor is undoing changes |
 
 
 ### reactor.mkdir_p.wait_for
@@ -1077,7 +1077,7 @@ Uses `File.rmdir/1` behind the scenes.
 |------|------|---------|------|
 | [`path`](#reactor-rmdir-path){: #reactor-rmdir-path .spark-required} | `Reactor.Template.Element \| Reactor.Template.Input \| Reactor.Template.Result \| Reactor.Template.Value` |  | The path of the directory to remove |
 | [`description`](#reactor-rmdir-description){: #reactor-rmdir-description } | `String.t` |  | An optional description for the step |
-| [`recreate_on_undo?`](#reactor-rmdir-recreate_on_undo?){: #reactor-rmdir-recreate_on_undo? } | `boolean` | `false` | Recreate the directory if the Reactor is undoing changes |
+| [`revert_on_undo?`](#reactor-rmdir-revert_on_undo?){: #reactor-rmdir-revert_on_undo? } | `boolean` | `false` | Recreate the directory if the Reactor is undoing changes |
 
 
 ### reactor.rmdir.wait_for

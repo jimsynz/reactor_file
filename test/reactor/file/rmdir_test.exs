@@ -32,7 +32,7 @@ defmodule Reactor.File.RmdirTest do
 
       rmdir :some_dir do
         path(input(:path))
-        recreate_on_undo?(true)
+        revert_on_undo?(true)
       end
 
       flunk :fail, "abort" do

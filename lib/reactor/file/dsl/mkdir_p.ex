@@ -10,7 +10,7 @@ defmodule Reactor.File.Dsl.MkdirP do
             description: nil,
             name: nil,
             path: nil,
-            remove_on_undo?: false
+            revert_on_undo?: false
 
   @type t :: %__MODULE__{
           __identifier__: any,
@@ -18,7 +18,7 @@ defmodule Reactor.File.Dsl.MkdirP do
           description: nil | String.t(),
           name: any,
           path: Path.t(),
-          remove_on_undo?: boolean
+          revert_on_undo?: boolean
         }
 
   @doc false
@@ -53,7 +53,7 @@ defmodule Reactor.File.Dsl.MkdirP do
           required: true,
           doc: "The path of the directory to create"
         ],
-        remove_on_undo?: [
+        revert_on_undo?: [
           type: :boolean,
           required: false,
           default: false,

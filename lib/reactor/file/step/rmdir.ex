@@ -8,7 +8,7 @@ defmodule Reactor.File.Step.Rmdir do
               )
 
   @opt_schema Spark.Options.new!(
-                recreate_on_undo?: [
+                revert_on_undo?: [
                   type: :boolean,
                   required: false,
                   default: false,
@@ -59,7 +59,7 @@ defmodule Reactor.File.Step.Rmdir do
   @impl true
   def can?(%{impl: {_, options}}, :undo) do
     with {:ok, options} <- Spark.Options.validate(options, @opt_schema) do
-      options[:recreate_on_undo?]
+      options[:revert_on_undo?]
     end
   end
 
@@ -71,7 +71,7 @@ defmodule Reactor.File.Step.Rmdir do
   def undo(result, _, _, _) when result.changed? == false, do: :ok
 
   def undo(result, _arguments, context, options) do
-    if Keyword.get(options, :recreate_on_undo?) && is_struct(result.before_stat, File.Stat) do
+    if Keyword.get(options, :revert_on_undo?) && is_struct(result.before_stat, File.Stat) do
       do_undo(result, context.current_step)
     else
       :ok

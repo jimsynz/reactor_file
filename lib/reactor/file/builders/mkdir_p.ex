@@ -7,7 +7,7 @@ defimpl Reactor.Dsl.Build, for: Reactor.File.Dsl.MkdirP do
     Builder.add_step(
       reactor,
       step.name,
-      {Reactor.File.Step.Mkdir, minus_p: true, remove_on_undo?: step.remove_on_undo?},
+      {Reactor.File.Step.Mkdir, minus_p: true, revert_on_undo?: step.revert_on_undo?},
       [Argument.from_template(:path, step.path) | step.arguments],
       ref: :step_name
     )

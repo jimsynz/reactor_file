@@ -14,7 +14,7 @@ defmodule Reactor.File.Step.Mkdir do
                   default: false,
                   doc: "Whether or not to create any missing intermediate directories"
                 ],
-                remove_on_undo?: [
+                revert_on_undo?: [
                   type: :boolean,
                   required: false,
                   default: false,
@@ -75,7 +75,7 @@ defmodule Reactor.File.Step.Mkdir do
   @impl true
   def can?(%{impl: {_, options}}, :undo) do
     with {:ok, options} <- Spark.Options.validate(options, @opt_schema) do
-      options[:remove_on_undo?]
+      options[:revert_on_undo?]
     end
   end
 
@@ -87,7 +87,7 @@ defmodule Reactor.File.Step.Mkdir do
   def undo(result, _, _, _) when result.changed? == false, do: :ok
 
   def undo(result, _arguments, context, options) do
-    if Keyword.get(options, :remove_on_undo?) do
+    if Keyword.get(options, :revert_on_undo?) do
       rmdir(result.path, context.current_step)
     else
       :ok
