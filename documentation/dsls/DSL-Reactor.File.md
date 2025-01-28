@@ -970,6 +970,85 @@ Target: `Reactor.File.Dsl.ReadLink`
 
 
 
+### reactor.rm
+```elixir
+rm name
+```
+
+
+Removes a file.
+
+Uses `File.rm/1` behind the scenes.
+
+
+### Nested DSLs
+ * [wait_for](#reactor-rm-wait_for)
+
+
+
+
+### Arguments
+
+| Name | Type | Default | Docs |
+|------|------|---------|------|
+| [`name`](#reactor-rm-name){: #reactor-rm-name .spark-required} | `atom` |  | A unique name for the step. Used when choosing the return value of the Reactor and for arguments into other steps |
+### Options
+
+| Name | Type | Default | Docs |
+|------|------|---------|------|
+| [`path`](#reactor-rm-path){: #reactor-rm-path .spark-required} | `Reactor.Template.Element \| Reactor.Template.Input \| Reactor.Template.Result \| Reactor.Template.Value` |  | The path to the file to remove |
+| [`description`](#reactor-rm-description){: #reactor-rm-description } | `String.t` |  | An optional description for the step |
+| [`revert_on_undo?`](#reactor-rm-revert_on_undo?){: #reactor-rm-revert_on_undo? } | `boolean` | `false` | Replace the original file if the Reactor is undoing changes |
+
+
+### reactor.rm.wait_for
+```elixir
+wait_for names
+```
+
+
+Wait for the named step to complete before allowing this one to start.
+
+Desugars to `argument :_, result(step_to_wait_for)`
+
+
+
+
+### Examples
+```
+wait_for :create_user
+```
+
+
+
+### Arguments
+
+| Name | Type | Default | Docs |
+|------|------|---------|------|
+| [`names`](#reactor-rm-wait_for-names){: #reactor-rm-wait_for-names .spark-required} | `atom \| list(atom)` |  | The name of the step to wait for. |
+### Options
+
+| Name | Type | Default | Docs |
+|------|------|---------|------|
+| [`description`](#reactor-rm-wait_for-description){: #reactor-rm-wait_for-description } | `String.t` |  | An optional description. |
+
+
+
+
+
+### Introspection
+
+Target: `Reactor.Dsl.WaitFor`
+
+
+
+
+### Introspection
+
+Target: `Reactor.File.Dsl.Rm`
+
+
+
 ### reactor.rmdir
 ```elixir
 rmdir name

@@ -20,6 +20,7 @@ defmodule Reactor.File do
           Reactor.File.Dsl.Mkdir,
           Reactor.File.Dsl.MkdirP,
           Reactor.File.Dsl.ReadLink,
+          Reactor.File.Dsl.Rm,
           Reactor.File.Dsl.Rmdir,
           Reactor.File.Dsl.Stat
         ],
