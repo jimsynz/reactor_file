@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.13.1](https://harton.dev/james/reactor_file/compare/v0.13.0...v0.13.1) (2025-01-29)
+
+
+
+
+### Improvements:
+
+* Add support for Reactor 0.11's guards. (#35)
+
 ## [v0.13.0](https://harton.dev/james/reactor_file/compare/v0.12.0...v0.13.0) (2025-01-28)
 ### Breaking Changes:
 
