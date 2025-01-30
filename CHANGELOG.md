@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.15.0](https://harton.dev/james/reactor_file/compare/v0.14.0...v0.15.0) (2025-01-30)
+
+
+
+
+### Features:
+
+* Add `touch` step. (#37)
+
 ## [v0.14.0](https://harton.dev/james/reactor_file/compare/v0.13.1...v0.14.0) (2025-01-30)
 
 
