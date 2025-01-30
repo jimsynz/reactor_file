@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.14.0](https://harton.dev/james/reactor_file/compare/v0.13.1...v0.14.0) (2025-01-30)
+
+
+
+
+### Features:
+
+* Add the `write_stat` step. (#36)
+
 ## [v0.13.1](https://harton.dev/james/reactor_file/compare/v0.13.0...v0.13.1) (2025-01-29)
 
 
