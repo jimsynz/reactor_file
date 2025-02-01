@@ -5,6 +5,15 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.17.0](https://harton.dev/james/reactor_file/compare/v0.16.0...v0.17.0) (2025-02-01)
+
+
+
+
+### Features:
+
+* Add `write_file` DSL step. (#40)
+
 ## [v0.16.0](https://harton.dev/james/reactor_file/compare/v0.15.0...v0.16.0) (2025-02-01)
 
 
