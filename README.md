@@ -23,7 +23,7 @@ defmodule ReverseFilesInDirectory do
   map :reverse_files do
     source result(:all_files)
 
-    file_read :read_file do
+    read_file :read_file do
       path element(:reverse_files)
     end
 
@@ -32,7 +32,7 @@ defmodule ReverseFilesInDirectory do
       run &{:ok, &String.reverse(&1.content)}
     end
 
-    file_write :write_file do
+    write_file :write_file do
       path element(:reverse_files)
       contents result(:reverse_content)
     end
@@ -40,7 +40,7 @@ defmodule ReverseFilesInDirectory do
     return :write_file
   end
 
-  return :reverese_files
+  return :reverse_files
 end
 
 Reactor.run!(ReverseFilesInDirectory, %{directory: "./to_reverse"})
