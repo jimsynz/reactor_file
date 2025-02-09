@@ -9,7 +9,7 @@ defmodule Reactor.File.Middleware do
   @impl true
   def init(context) do
     chunk =
-      {Node.self(), System.pid(), self()}
+      {Node.self(), System.pid(), self(), context.__reactor__.id}
       |> :erlang.phash2()
       |> Integer.to_string(16)
 
@@ -17,7 +17,7 @@ defmodule Reactor.File.Middleware do
       System.tmp_dir!()
       |> Path.join(chunk)
 
-    with :ok <- File.mkdir(tmp_dir) do
+    with {:ok, tmp_dir} <- make_tmp_dir(tmp_dir) do
       {:ok, Map.put(context, __MODULE__, %{tmp_dir: tmp_dir})}
     end
   end
@@ -36,5 +36,17 @@ defmodule Reactor.File.Middleware do
     File.rm_rf!(tmp_dir)
 
     :ok
+  end
+
+  defp make_tmp_dir(tmp_dir, id \\ 0) do
+    path = "#{tmp_dir}_#{id}"
+
+    if File.dir?(path) do
+      make_tmp_dir(tmp_dir, id + 1)
+    else
+      with :ok <- File.mkdir(path) do
+        {:ok, path}
+      end
+    end
   end
 end
