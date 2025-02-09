@@ -87,7 +87,8 @@ defmodule Reactor.File.MixProject do
       filter_modules: ~r/^Elixir\.Reactor/,
       groups_for_extras: extra_documentation_groups(),
       main: "readme",
-      source_url_pattern: "https://harton/dev/james/reactor_rec/src/branch/main/%{path}#L%{line}",
+      source_url_pattern:
+        "https://harton/dev/james/reactor_file/src/branch/main/%{path}#L%{line}",
       spark: [
         extension: [
           %{
