@@ -5,6 +5,17 @@ See [Conventional Commits](Https://conventionalcommits.org) for commit guideline
 
 <!-- changelog -->
 
+## [v0.18.1](https://harton.dev/james/reactor_file/compare/v0.18.0...v0.18.1) (2025-02-09)
+
+
+
+
+### Bug Fixes:
+
+* `write_file` should work when the file doesn't exist.
+
+* allow middlware to be used in composed reactors without clashing.
+
 ## [v0.18.0](https://harton.dev/james/reactor_file/compare/v0.17.0...v0.18.0) (2025-02-02)
 
 
