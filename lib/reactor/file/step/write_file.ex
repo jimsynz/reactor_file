@@ -51,7 +51,7 @@ defmodule Reactor.File.Step.WriteFile do
   @doc false
   @impl true
   def mutate(arguments, context, options) do
-    with {:ok, before_stat} <- stat(arguments.path, [], context.current_step),
+    with {:ok, before_stat} <- maybe_stat(arguments.path, [], context.current_step),
          {:ok, backup} <-
            maybe_backup_file(arguments.path, before_stat, context, options[:revert_on_undo?]),
          :ok <-
